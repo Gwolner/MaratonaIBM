@@ -1,0 +1,660 @@
+{
+  "name": "Sommelier",
+  "intents": [
+    {
+      "intent": "pedindo_comida",
+      "examples": [
+        {
+          "text": "Tenho um vinho tinto francês Les Violettes. Que prato você sugere que eu devo fazer para acompanhar este vinho?"
+        },
+        {
+          "text": "Qual vinho é melhor com carne vermelha?"
+        },
+        {
+          "text": "Tenho um vinho chileno Rosé Céfiro. Que prato eu devo preparar?"
+        },
+        {
+          "text": "Tenho um vinho tinto, que prato preparar?"
+        },
+        {
+          "text": "Qual vinho você indica para comer com queijo?"
+        },
+        {
+          "text": "Qual vinho é indicado para acompanhar massas?"
+        },
+        {
+          "text": "Qual comida é boa com vinho tinto?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "pedindo_vinho",
+      "examples": [
+        {
+          "text": "Pretendo servir queijo como aperitivo. Qual é o vinho que melhor combina?"
+        },
+        {
+          "text": "gostaria de um vinho para acompanhar carnes vermelhas"
+        },
+        {
+          "text": "carne vermelha"
+        },
+        {
+          "text": "quero um vinho"
+        },
+        {
+          "text": "quero um vinho para comer com queijo"
+        },
+        {
+          "text": "Qual vinho combina mais com carnes de caça?"
+        },
+        {
+          "text": "Qual vinho uso paraacompanhar queijo branco?"
+        },
+        {
+          "text": "qual vinho é bom com massas?"
+        },
+        {
+          "text": "Branco"
+        },
+        {
+          "text": "roses"
+        },
+        {
+          "text": "tinto"
+        },
+        {
+          "text": "carnes vermelhas"
+        },
+        {
+          "text": "Qual vinho é adequado para bacalhau?"
+        },
+        {
+          "text": "Preciso de um vinho para combinar com peixe."
+        },
+        {
+          "text": "Pretendo servir queijo branco como aperitivo. Qual é o vinho que melhor combina com este queijo?"
+        },
+        {
+          "text": "Eu quero uma sugestão de vinho branco para acompanhar com carne vermelha."
+        },
+        {
+          "text": "Vou dar um jantar em casa. Qual vinho devo comprar?"
+        },
+        {
+          "text": "Vou servir uma massa no almoço. Qual é o vinho que melhor combina?"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "tipo_de_vinho",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "rosés",
+          "synonyms": [
+            "roses",
+            "rose"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "tinto",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "branco",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "pratos",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "peixe",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "queijos curados",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "frutos do mar",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "carne de caça",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "queijo branco",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "bacalhau",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "carne vermelha e massas",
+          "synonyms": [
+            "carne vermelha",
+            "massa",
+            "massas"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "nome_dos_vinhos",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "joao",
+          "synonyms": [
+            "joao portugal",
+            "joao portugal ramos"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cefiro",
+          "synonyms": [
+            "céfiro"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "chardonnay",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "alentejano",
+          "synonyms": [
+            "alentejano montado",
+            "montado"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "dory",
+          "synonyms": [
+            "dory colheita"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cadus",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "violettes",
+          "synonyms": [
+            "les violettes"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "haut",
+          "synonyms": [
+            "fourat",
+            "haut fourat"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "pt-br",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "skill_id": "55f382b2-8080-47b5-b3f7-03c038d7ea2b",
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "title": "handler_2_1565867643416",
+      "output": {
+        "text": {
+          "values": [
+            "Qual prato será servido?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1565867643337",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1565867643416",
+      "previous_sibling": "handler_8_1565867643416"
+    },
+    {
+      "type": "event_handler",
+      "title": "handler_8_1565867643416",
+      "output": {},
+      "parent": "slot_5_1565867643337",
+      "context": {
+        "pratos": "@pratos"
+      },
+      "conditions": "@pratos",
+      "event_name": "input",
+      "dialog_node": "handler_8_1565867643416"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Qual o nome do vinho?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1565871772887",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1565871772962",
+      "previous_sibling": "handler_3_1565871772962"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_5_1565871772887",
+      "context": {
+        "nome_dos_vinhos": "@nome_dos_vinhos"
+      },
+      "conditions": "@nome_dos_vinhos",
+      "event_name": "input",
+      "dialog_node": "handler_3_1565871772962"
+    },
+    {
+      "type": "slot",
+      "title": "slot_5_1565867643337",
+      "output": {},
+      "parent": "node_9_1565866783344",
+      "variable": "$pratos",
+      "dialog_node": "slot_5_1565867643337",
+      "previous_sibling": "response_10_1565869271467"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1565868150805",
+      "output": {
+        "text": {
+          "values": [
+            "Vinho Chileno Branco CHARDONNAY Garrafa 750ml(1178413)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1565866783344",
+      "conditions": "$pratos:(carne vermelha e massas) && $tipo_de_vinho:branco",
+      "dialog_node": "response_8_1565868150805",
+      "previous_sibling": "response_9_1565868005455"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1565869072607",
+      "output": {
+        "text": {
+          "values": [
+            "Vinho Portugues Branco DORY COLHEIRA Garrafa 750ml(1178409)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1565866783344",
+      "conditions": "$pratos:bacalhau",
+      "dialog_node": "response_10_1565869072607",
+      "previous_sibling": "response_6_1565868993795"
+    },
+    {
+      "type": "slot",
+      "title": "slot_10_1565867725561",
+      "output": {},
+      "parent": "node_9_1565866783344",
+      "variable": "$tipo_de_vinho",
+      "conditions": "$pratos:(carne vermelha e massas)",
+      "dialog_node": "slot_10_1565867725561",
+      "previous_sibling": "slot_5_1565867643337"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_10_1565869271467",
+      "output": {
+        "text": {
+          "values": [
+            "Vinho Francês Tinto Chânteau HAUT FOURAT Bordeaux Garrafa 750ml(1164670)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1565866783344",
+      "conditions": "$pratos:(carne de caça)",
+      "dialog_node": "response_10_1565869271467",
+      "previous_sibling": "response_7_1565869131065"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1565868551741",
+      "output": {
+        "text": {
+          "values": [
+            "Vinho Argentino Tinto CADUS Signature Series Petit Verdot Garrafa 750ml(1178431)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1565866783344",
+      "conditions": "$pratos:(carne vermelha e massas) && $tipo_de_vinho:tinto",
+      "dialog_node": "response_7_1565868551741",
+      "previous_sibling": "response_8_1565868150805"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1565869131065",
+      "output": {
+        "text": {
+          "values": [
+            "Vinho Francês Tinto LES VIOLETTES Cotês Du Rhône-Villages Garrafa 750ml(1164669)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1565866783344",
+      "conditions": "$pratos:(queijo curado)",
+      "dialog_node": "response_7_1565869131065",
+      "previous_sibling": "response_10_1565869072607"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1565868885882",
+      "output": {
+        "text": {
+          "values": [
+            "Vinho Portugues Branco JOAO PORTUGAL RAMOS Alvarinho Garrafa 750ml(1178407)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1565866783344",
+      "conditions": "$pratos:peixe || $pratos:(frutos do mar)",
+      "dialog_node": "response_9_1565868885882",
+      "previous_sibling": "response_7_1565868551741"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1565868993795",
+      "output": {
+        "text": {
+          "values": [
+            "Vinho Portugues Branco ALENTEJANO MONTADO Garrafa 750ml(1178408)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1565866783344",
+      "conditions": "$pratos:(queijo branco)",
+      "dialog_node": "response_6_1565868993795",
+      "previous_sibling": "response_9_1565868885882"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_9_1565868005455",
+      "output": {
+        "text": {
+          "values": [
+            "Vinho Chileno Rosé CÉFIRO Garrafa 750ml(1178414)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1565866783344",
+      "conditions": "$pratos:(carne vermelha e massas)&&$tipo_de_vinho:rosés",
+      "dialog_node": "response_9_1565868005455"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1565872318700",
+      "output": {
+        "text": {
+          "values": [
+            "Sugiro carnes de caça (1265678)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1565871701594",
+      "conditions": "$nome_dos_vinhos:haut",
+      "dialog_node": "response_8_1565872318700",
+      "previous_sibling": "response_6_1565872316915"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1565872321808",
+      "output": {
+        "text": {
+          "values": [
+            "Sugiro bacalhau (1287869)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1565871701594",
+      "conditions": "$nome_dos_vinhos:dory",
+      "dialog_node": "response_7_1565872321808",
+      "previous_sibling": "response_7_1565872320136"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1565872309851",
+      "output": {
+        "text": {
+          "values": [
+            "Sugiro carnes vermelhas e massas (1287868)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1565871701594",
+      "conditions": "$nome_dos_vinhos:chardonnay",
+      "dialog_node": "response_6_1565872309851",
+      "previous_sibling": "response_3_1565871772165"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_3_1565871772165",
+      "output": {
+        "text": {
+          "values": [
+            "Sugiro carnes vermelhas e massas (1287868)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1565871701594",
+      "conditions": "$nome_dos_vinhos:cefiro",
+      "dialog_node": "response_3_1565871772165",
+      "previous_sibling": "slot_5_1565871772887"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1565872320136",
+      "output": {
+        "text": {
+          "values": [
+            "Sugiro queijos curados (1287873)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1565871701594",
+      "conditions": "$nome_dos_vinhos:violettes",
+      "dialog_node": "response_7_1565872320136",
+      "previous_sibling": "response_8_1565872318700"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_6_1565872316915",
+      "output": {
+        "text": {
+          "values": [
+            "Sugiro queijos brancos (1287870)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1565871701594",
+      "conditions": "$nome_dos_vinhos:alentejano",
+      "dialog_node": "response_6_1565872316915",
+      "previous_sibling": "response_7_1565872315474"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_8_1565872314074",
+      "output": {
+        "text": {
+          "values": [
+            "Sugiro carnes vermelhas e massas (1287868)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1565871701594",
+      "conditions": "$nome_dos_vinhos:cadus",
+      "dialog_node": "response_8_1565872314074",
+      "previous_sibling": "response_6_1565872309851"
+    },
+    {
+      "type": "response_condition",
+      "title": "response_7_1565872315474",
+      "output": {
+        "text": {
+          "values": [
+            "Sugiro peixe ou frutos do mar (1287871)"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1565871701594",
+      "conditions": "$nome_dos_vinhos:joao",
+      "dialog_node": "response_7_1565872315474",
+      "previous_sibling": "response_8_1565872314074"
+    },
+    {
+      "type": "slot",
+      "parent": "node_7_1565871701594",
+      "variable": "$nome_dos_vinhos",
+      "dialog_node": "slot_5_1565871772887"
+    },
+    {
+      "type": "event_handler",
+      "title": "handler_2_1565867725563",
+      "output": {
+        "text": {
+          "values": [
+            "Qual o tipo de vinho (Rosé, Tinto ou Branco)?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1565867725561",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1565867725563",
+      "previous_sibling": "handler_10_1565867725563"
+    },
+    {
+      "type": "event_handler",
+      "title": "handler_10_1565867725563",
+      "output": {},
+      "parent": "slot_10_1565867725561",
+      "context": {
+        "tipo_de_vinho": "@tipo_de_vinho"
+      },
+      "conditions": "@tipo_de_vinho",
+      "event_name": "input",
+      "dialog_node": "handler_10_1565867725563"
+    },
+    {
+      "type": "frame",
+      "title": "Pedindo comida",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#pedindo_comida",
+      "dialog_node": "node_7_1565871701594",
+      "previous_sibling": "node_9_1565866783344"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "text": {
+          "values": [
+            "Eu não entendi. Você pode tentar reformular a frase.",
+            "Você pode reformular sua afirmação? Eu não estou entendendo.",
+            "Eu não entendi o sentido."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_7_1565871701594"
+    },
+    {
+      "type": "frame",
+      "title": "Pedindo vinho",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#pedindo_vinho",
+      "dialog_node": "node_9_1565866783344",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "text": {
+          "values": [
+            "Olá. Como posso te ajudar?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    }
+  ],
+  "workspace_id": "55f382b2-8080-47b5-b3f7-03c038d7ea2b",
+  "counterexamples": [
+    {
+      "text": "Qual vinho uso paraacompanhar queijo branco?"
+    }
+  ],
+  "system_settings": {},
+  "learning_opt_out": false,
+  "status": "Available"
+}
