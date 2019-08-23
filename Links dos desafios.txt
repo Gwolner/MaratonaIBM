@@ -8,3 +8,9 @@ https://104180-desafio2-behindthecode.mybluemix.net/
 
 #3
 https://104180-desafio3-behindthecode.mybluemix.net/
+
+#4
+https://104180-desafio4-behindthecode.mybluemix.net/
+
+#5
+https://104180-desafio5-behindthecode.mybluemix.net/
