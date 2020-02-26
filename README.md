@@ -7,6 +7,10 @@ Resolução dos desafios proposto na Maratona IBM - Behind the code 2019.
 
 Os diretórios contidos neste repositório contém arquivos que foram essenciais para realizar a maioria dos desafios.
 
+<table>
+ <tr>
+  <td>
+   
 <b>Desafio #1 - GPA</b>
 
 [Página do desafio](https://github.com/maratonadev/desafio-1/)
@@ -26,7 +30,7 @@ Os diretórios contidos neste repositório contém arquivos que foram essenciais
 [Página do desafio](https://github.com/maratonadev/desafio-3/)
 
 [Serviço gerado](https://104180-desafio3-behindthecode.mybluemix.net/)
-
+ 
 
 <b>Desafio #4 - BOTICÁRIO</b>
 
@@ -34,7 +38,9 @@ Os diretórios contidos neste repositório contém arquivos que foram essenciais
 
 [Serviço gerado](https://104180-desafio4-behindthecode.mybluemix.net/)
 
-
+ </td>
+  <td>
+ 
 <b>Desafio #5 - BRF</b>
 
 [Página do desafio](https://github.com/maratonadev/desafio-5/)
@@ -60,8 +66,10 @@ Os diretórios contidos neste repositório contém arquivos que foram essenciais
 
 [Página do desafio](https://github.com/maratonadev/desafio-8/)
 
-Os serviços neste desafio não foram disponíveis, apenas entregues na plataforma da IBM.
+Este desafio não gerou serviço.
 
+ </td>  
+</tr>
+</table>
 
-
-
+ 
