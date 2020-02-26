@@ -13,29 +13,25 @@ Os diretórios contidos neste repositório contém arquivos que foram essenciais
    
 <b>Desafio #1 - GPA</b>
 
-[Página do desafio](https://github.com/maratonadev/desafio-1/)
-
+[Página do desafio](https://github.com/maratonadev/desafio-1/)</br>
 [Serviço gerado](https://104180-desafio1-behindthecode.mybluemix.net/)
 
 
 <b>Desafio #2 - FIAP</b>
 
-[Página do desafio](https://github.com/maratonadev/desafio-2/)
-
+[Página do desafio](https://github.com/maratonadev/desafio-2/)</br>
 [Serviço gerado](https://104180-desafio2-behindthecode.mybluemix.net/)
 
 
 <b>Desafio #3 - UNIJÁ</b>
 
-[Página do desafio](https://github.com/maratonadev/desafio-3/)
-
+[Página do desafio](https://github.com/maratonadev/desafio-3/)</br>
 [Serviço gerado](https://104180-desafio3-behindthecode.mybluemix.net/)
  
 
 <b>Desafio #4 - BOTICÁRIO</b>
 
-[Página do desafio](https://github.com/maratonadev/desafio-4/)
-
+[Página do desafio](https://github.com/maratonadev/desafio-4/)</br>
 [Serviço gerado](https://104180-desafio4-behindthecode.mybluemix.net/)
 
  </td>
@@ -43,29 +39,25 @@ Os diretórios contidos neste repositório contém arquivos que foram essenciais
  
 <b>Desafio #5 - BRF</b>
 
-[Página do desafio](https://github.com/maratonadev/desafio-5/)
-
+[Página do desafio](https://github.com/maratonadev/desafio-5/)</br>
 [Serviço gerado](https://104180-desafio5-behindthecode.mybluemix.net/)
 
 
 <b>Desafio #6 - INGRAM</b>
 
-[Página do desafio](https://github.com/maratonadev/desafio-6/)
-
+[Página do desafio](https://github.com/maratonadev/desafio-6/)</br>
 [Serviço gerado](https://104180-desafio6-behindthecode.mybluemix.net/)
 
 
 <b>Desafio #7 - BANCO ORIGINAL</b>
 
-[Página do desafio](https://github.com/maratonadev/desafio-7/)
-
+[Página do desafio](https://github.com/maratonadev/desafio-7/)</br>
 [Serviço gerado](https://104180-desafio7-behindthecode.mybluemix.net/)
 
 
 <b>Desafio #8 - SAINT PAUL & LIT</b>
 
-[Página do desafio](https://github.com/maratonadev/desafio-8/)
-
+[Página do desafio](https://github.com/maratonadev/desafio-8/)</br>
 Este desafio não gerou serviço.
 
  </td>  
