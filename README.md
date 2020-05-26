@@ -1,6 +1,6 @@
 # Maratona IBM - Behind The Code 2019 <img src="img/ibm.jpg" width="80" height="40" align="right">
 
-Resolução dos desafios proposto na Maratona IBM - Behind the code 2019.
+> Resolução dos desafios proposto na Maratona IBM - Behind the code 2019.
 
  <img src="img/maratona.png" align="middle">
 
